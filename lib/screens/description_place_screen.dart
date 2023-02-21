@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DescriptionPlaceScreen extends StatelessWidget {
   final String namePlace;
@@ -13,7 +14,7 @@ class DescriptionPlaceScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const TextStyle titleStyle = TextStyle(
+    const TextStyle titleStyle = TextStyle(      
       fontSize: 30.0,
       fontWeight: FontWeight.bold,
     );
@@ -61,8 +62,11 @@ class DescriptionPlaceScreen extends StatelessWidget {
           ),
           child: Text(
             namePlace,
-            style: titleStyle,
+            style: GoogleFonts.lato(
+              textStyle: titleStyle,
+            ),
             textAlign: TextAlign.left,
+            
           ),
         ),
         Row(
@@ -80,10 +84,12 @@ class DescriptionPlaceScreen extends StatelessWidget {
       margin: const EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
       child: Text(
         descriptionPlace,
-        style: const TextStyle(
+        style: GoogleFonts.almendra(
+          textStyle: const TextStyle(
           fontSize: 16.0,
           fontWeight: FontWeight.bold,
           color: Color(0xFF56575a),
+        ),
         ),
       ),
     );
