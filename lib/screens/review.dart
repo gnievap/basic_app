@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Review extends StatelessWidget {
-  String pathImage = 'asset/img/waterFalls1';
-  const Review({super.key});
+  final String pathImage = 'asset/img/waterFalls1';
+   const Review({super.key});
 
   @override
   Widget build(BuildContext context) {    

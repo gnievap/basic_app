@@ -8,6 +8,7 @@ environment:
 
 assets:
   - assets/img/waterfalls1.jpg
+  - assets/img/profile_pic.jpg
 
 dependencies:
   flutter:
