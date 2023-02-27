@@ -7,8 +7,10 @@ environment:
   sdk: '>=3.0.0-198.0.dev <4.0.0'
 
 assets:
-  - assets/img/waterfalls1.jpg
-  - assets/img/profile_pic.jpg
+  - assets/img/profile_pic1.jpg
+  - assets/img/profile_pic2.jpg
+  - assets/img/profile_pic3.jpg
+  - assets/img/profile_pic4.jpg
 
 dependencies:
   flutter:
