@@ -30,6 +30,7 @@ class Review extends StatelessWidget {
 
     final userName = Container(
       margin: const EdgeInsets.only(
+        top: 20.0,
         left: 20.0,
         ),
         child: Text(
@@ -46,7 +47,7 @@ class Review extends StatelessWidget {
         left: 20.0,
         ),
         child: Text(
-          details,
+          comment,
           textAlign: TextAlign.left,
           style: GoogleFonts.lato(
             fontSize: 13.0,
@@ -59,6 +60,7 @@ class Review extends StatelessWidget {
 
     final userDetails = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         userName,
         userInfo,
@@ -66,6 +68,7 @@ class Review extends StatelessWidget {
       ],
     );
 
+    
     final photo = Container(
       margin: const EdgeInsets.only(
           top: 20.0,
@@ -81,11 +84,14 @@ class Review extends StatelessWidget {
       ),
     );
 
-    return Row(
+   return Row(
+    crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         photo,
-        userComment,
+        userDetails,
       ],
     );
+
+    //return photo;
   }
 }

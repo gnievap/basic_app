@@ -1,4 +1,6 @@
 import 'package:basic_app/screens/description_place_screen.dart';
+import 'package:basic_app/screens/review.dart';
+import 'package:basic_app/screens/review_lists.dart';
 import 'package:flutter/material.dart';
 
 
@@ -18,12 +20,16 @@ class MainApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: DescriptionPlaceScreen(
-          namePlace: 'Duwili Ella',
-          stars: 3,
-          descriptionPlace: descriptionText,
+        appBar: AppBar(
+          title: const Text('Travel App'),
         ),
-      ),
-    );
+        /*body: DescriptionPlaceScreen(
+                  namePlace: 'Duwili Ella',
+                  stars: 3,
+                  descriptionPlace: descriptionText,
+              ),*/
+        body: const Review(user: 'Filomena Acosta', details: '1 review 5 photos', comment: 'There is an amazing place in Sri Lanka', pathImage:'assets/img/profile_pic1.jpg'),
+        ),
+      );
   }
 }

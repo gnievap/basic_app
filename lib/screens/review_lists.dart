@@ -7,6 +7,7 @@ class ReviewList extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Review(user: 'Filomena Acosta', details: '1 review 5 photos', comment: 'There is an amazing place in Sri Lanka', pathImage:'asset/img/profile_pic1'),
         Review(user: 'Pánfilo Torres', details: '3 review 10 photos', comment: 'Beautiful place', pathImage:'asset/img/profile_pic2'),
