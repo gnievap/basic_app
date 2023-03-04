@@ -2,6 +2,7 @@ import 'package:basic_app/screens/description_place_screen.dart';
 import 'package:basic_app/screens/gradient_back.dart';
 import 'package:basic_app/screens/review_lists.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 
 void main() {
@@ -17,12 +18,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent
+      ),
+    );
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Travel App'),
-        ),
         body: Stack(
           children: [
             ListView(
@@ -35,7 +38,7 @@ class MainApp extends StatelessWidget {
               const ReviewList(),
               ],
             ),
-            const GradientBack(),
+             const GradientBack( title: 'Popular',),
           ],
         ),
         ),
