@@ -1,3 +1,4 @@
+import 'package:basic_app/screens/button_navigate.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -97,6 +98,7 @@ class DescriptionPlaceScreen extends StatelessWidget {
       children: [
         tittleStars,
         description,
+        const ButtonNavigate(buttonText: 'Navigate',),
       ],
     );
   }
