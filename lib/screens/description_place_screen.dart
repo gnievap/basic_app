@@ -30,16 +30,16 @@ class DescriptionPlaceScreen extends StatelessWidget {
       ),
     );
 
-    final starBorder = Container(
-      margin: const EdgeInsets.only(
-        top: 323.0,
-        right: 3.0,
-      ),
-      child: const Icon(
-        Icons.star_border,
-        color: Color(0xFFf2C611),
-      ),
-    );
+    // final starBorder = Container(
+    //   margin: const EdgeInsets.only(
+    //     top: 323.0,
+    //     right: 3.0,
+    //   ),
+    //   child: const Icon(
+    //     Icons.star_border,
+    //     color: Color(0xFFf2C611),
+    //   ),
+    // );
 
     final star = Container(
       margin: const EdgeInsets.only(

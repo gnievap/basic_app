@@ -10,21 +10,36 @@ class Review extends StatelessWidget {
     const Review({super.key, required this.user, required this.details, required this.comment, required this.pathImage});
 
   @override
-  Widget build(BuildContext context) {    
+  Widget build(BuildContext context) {
+    final star = Container(
+      margin: const EdgeInsets.only(
+        right: 3.0,
+      ),
+      child: const Icon(
+        Icons.star,
+        color: Color(0xFFf2C611),
+      ),
+    );
 
     final userInfo = Container(
       margin: const EdgeInsets.only(
         left: 20.0,
         ),
-        child: Text(
-          details,
-          textAlign: TextAlign.left,
-          style: const TextStyle(
-            fontFamily: "Lato",
-            fontSize: 13.0,
-            color: Color(0xFFa3a5a7),
-          ),
-
+        child: Row(
+          children: [
+            Text(
+              details,
+              textAlign: TextAlign.left,
+              style: const TextStyle(
+                fontFamily: "Lato",
+                fontSize: 13.0,
+                color: Color(0xFFa3a5a7),
+              ),
+            ),
+            star,
+            star,
+            star,
+          ],
         ),
     );
 
@@ -37,7 +52,8 @@ class Review extends StatelessWidget {
           user,
           textAlign: TextAlign.left,
           style: GoogleFonts.lato(
-            fontSize: 17.0,
+            fontSize: 16.0,
+            fontWeight: FontWeight.bold,
           ),
         ),
     );
@@ -50,9 +66,7 @@ class Review extends StatelessWidget {
           comment,
           textAlign: TextAlign.left,
           style: GoogleFonts.lato(
-            fontSize: 13.0,
-            color: const Color(0xFFa3a5a7),
-            fontWeight: FontWeight.bold,
+            fontSize: 15.0,
           ),
         ),
     );

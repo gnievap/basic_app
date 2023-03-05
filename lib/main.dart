@@ -1,5 +1,5 @@
 import 'package:basic_app/screens/description_place_screen.dart';
-import 'package:basic_app/screens/gradient_back.dart';
+import 'package:basic_app/screens/header.dart';
 import 'package:basic_app/screens/review_lists.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -18,28 +18,33 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // SystemChrome.setEnabledSystemUIOverlays([]);
     SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent
-      ),
+       const SystemUiOverlayStyle(
+         statusBarColor: Colors.transparent,
+         statusBarBrightness: Brightness.light,
+       )
     );
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Stack(
-          children: [
-            ListView(
-              children: [
-                DescriptionPlaceScreen(
-                  namePlace: 'Duwili Ella',
-                  stars: 3,
-                  descriptionPlace: descriptionText,
+        body: SafeArea(
+          top: false,
+          child: Stack(
+            children: [
+              ListView(
+                children: [
+                  DescriptionPlaceScreen(
+                    namePlace: 'Duwili Ella',
+                    stars: 3,
+                    descriptionPlace: descriptionText,
+                ),
+                const ReviewList(),
+                ],
               ),
-              const ReviewList(),
-              ],
-            ),
-             const GradientBack( title: 'Popular',),
-          ],
+              const Header(),
+            ],
+          ),
         ),
         ),
       );
