@@ -1,3 +1,4 @@
+import 'package:basic_app/screens/small_button.dart';
 import 'package:flutter/material.dart';
 
 class CardImage extends StatelessWidget {
@@ -9,9 +10,9 @@ class CardImage extends StatelessWidget {
   Widget build(BuildContext context) {
     final card = Container(
       height: 350.0,
-      width: 250.0,
+      width: 270.0,
       margin: const EdgeInsets.only(
-        top: 80.0,
+        top: 60.0,
         left: 20.0,
       ),
       decoration: BoxDecoration(
@@ -29,6 +30,12 @@ class CardImage extends StatelessWidget {
         ],
       ),
     );
-    return card;
+    return Stack(
+      alignment: Alignment(0.9, 1.1),
+      children: [
+        card,
+        SmallButton(),
+      ],
+    );
   }
 }
