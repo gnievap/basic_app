@@ -1,6 +1,4 @@
-import 'package:basic_app/screens/description_place_screen.dart';
-import 'package:basic_app/screens/header.dart';
-import 'package:basic_app/screens/review_lists.dart';
+import 'package:basic_app/screens/travels.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -22,14 +20,9 @@ class MainApp extends StatelessWidget {
          statusBarBrightness: Brightness.light,
        )
     );
-    return  MaterialApp(
+    return  const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: SafeArea(
-          top: false,
-          child:
-        ),
-        ),
+      home: Travels(),
       );
   }
 }
