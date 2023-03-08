@@ -35,17 +35,22 @@ class _TravelsState extends State<Travels> {
           primaryColor: Colors.purpleAccent,
         ), 
         child: BottomNavigationBar(
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
           onTap: onTapTapped,
           currentIndex: indexTap,
           items: const [
             BottomNavigationBarItem(
               icon:Icon(Icons.home),
+              label: '',
                ),
             BottomNavigationBarItem(
               icon:Icon(Icons.search),
+              label: '',
                ),
             BottomNavigationBarItem(
               icon:Icon(Icons.person),
+              label: '',
                ),
           ],)),
     );
